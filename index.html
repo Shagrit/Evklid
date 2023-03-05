@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/media.css">
   <title>Евклид</title>
@@ -32,13 +33,56 @@
             <a href="" class="header__link link">Контакты</a>
           </li>
         </ul>
+        <div class="header__search ">
+          <span class="header__search-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="7.56126" height="1.89031"
+                transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333" />
+              <path
+                d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+                stroke="#333333" stroke-width="2" />
+            </svg>
+          </span>
+          <input type="text" class="header__search-active" placeholder="Что будем искать?">
+        </div>
       </nav>
-      <div class="header__search ">
-        <span class="header__search-icon"></span>
-        <input type="text" class="header__search-active" placeholder="Что будем искать?">
-      </div>
     </div>
   </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="hero__container container">
+        <div class="hero__box">
+          <h1 class="hero__title">
+            Проектные решения любой сложности
+          </h1>
+          <p class="hero__discription">
+            Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
+          </p>
+          <a href="" class="hero__btn btn">
+            Заказать расчёт
+          </a>
+          <ul class="hero__list list">
+            <li class="hero__item item hero__item-active">
+              <a href="" class="hero__link link"></a>
+            </li>
+            <li class="hero__item">
+              <a href="" class="hero__link link"></a>
+            </li>
+            <li class="hero__item">
+              <a href="" class="hero__link link"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      FOOTER
+    </div>
+  </footer>
 </body>
 
 </html>

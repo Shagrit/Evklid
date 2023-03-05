@@ -1,79 +1,77 @@
 @charset "UTF-8";
-/*!Обнуление---------------------------------------------------------------------------------------*/
+/*!Обнуление и т.д---------------------------------------------------------------------------------------*/
 * {
   padding: 0;
   margin: 0;
   border: 0;
 }
-
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 :focus, :active {
   outline: none;
 }
-
 a:focus, a:active {
   outline: none;
 }
-
 nav, footer, header, aside {
   display: block;
 }
-
 html, body {
   height: 100%;
   width: 100%;
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
-  font-family: 'Montserrat' sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--buckground-color);
+  color: var(--text-color);
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-
 input, button, textarea {
   font-family: inherit;
 }
-
 input::-ms-clear {
   display: none;
 }
-
 button {
   cursor: pointer;
 }
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-
 a, a:visited {
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: none;
 }
-
 ul li {
   list-style: none;
 }
-
 img {
   vertical-align: top;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
+  margin: 0;
+  padding: 0;
 }
-/*!Обнуление---------------------------------------------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
 
 /*!Шрифты---------------------------------------------------------------------------------------*/
 /* montserrat-regular - cyrillic_latin */
@@ -82,8 +80,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/montserrat-v25-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/montserrat-v25-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
+  src: url('../fonts/montserrat-v25-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v25-cyrillic_latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* montserrat-600 - cyrillic_latin */
 @font-face {
@@ -91,8 +89,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/montserrat-v25-cyrillic_latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/montserrat-v25-cyrillic_latin-600.woff') format('woff'), /* Modern Browsers */
+  src: url('../fonts/montserrat-v25-cyrillic_latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v25-cyrillic_latin-600.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* montserrat-700 - cyrillic_latin */
 @font-face {
@@ -100,8 +98,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/montserrat-v25-cyrillic_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/montserrat-v25-cyrillic_latin-700.woff') format('woff'), /* Modern Browsers */
+  src: url('../fonts/montserrat-v25-cyrillic_latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v25-cyrillic_latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* montserrat-800 - cyrillic_latin */
 @font-face {
@@ -109,66 +107,135 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 800;
-  src: url('../fonts/montserrat-v25-cyrillic_latin-800.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/montserrat-v25-cyrillic_latin-800.woff') format('woff'), /* Modern Browsers */
+  src: url('../fonts/montserrat-v25-cyrillic_latin-800.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v25-cyrillic_latin-800.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/*!Шрифты---------------------------------------------------------------------------------------*/
 
 /*!Переменные---------------------------------------------------------------------------------------*/
 :root {
   --main-color: #FF9900;
 }
 :root {
-  --buckground-color: #CACACA;
+  --buckground-color: #E5E5E5;
 }
-/*!Переменные---------------------------------------------------------------------------------------*/
+:root {
+  --text-color: #333;
+}
 
-/*!Общие---------------------------------------------------------------------------------------*/
+/*!Общие классы---------------------------------------------------------------------------------------*/
 .container {
-  max-width: 1770px;
+  max-width: 1800px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 .list {
+  display: flex;
 }
 .item {
 }
 .link {
+  color: var(--text-color);
 }
-/*!Общие---------------------------------------------------------------------------------------*/
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 24.83px 36.88px;
+  font-weight: 700;
+  font-size: 23.4581px;
+  line-height: 29px;
+}
 
 /**header---------------------------------------------------------------------------------------*/
 .header {
-
-  &__container {
-  }
-
-  &__logo {
-  }
-
-  &__nav {
-  }
-
-  &__list {
-  }
-
-  &__item {
-  }
-
-  &__item-active {
-  }
-
-  &__link {
-  }
-
-  &__search {
-  }
-
-  &__search-icon {
-  }
-
-  &__search-active {
-  }
+  background-color: #fff;
 }
-/**header---------------------------------------------------------------------------------------*/
+.header__container {
+  display: flex;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.header__logo {
+  margin-right: auto;
+}
+.header__nav {
+  display: flex;
+}
+.header__list {
+  align-items: center;
+  gap: 85px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.header__item {
+}
+.header__item-active {
+}
+.header__link {
+}
+.header__search {
+}
+.header__search-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 85px;
+}
+.header__search-active {
+  display: none;
+}
+
+/**hero---------------------------------------------------------------------------------------*/
+.hero {
+}
+.hero__container {
+  height: 620px;
+  background-image: url('/img/photo/BGmain.jpg');
+  background-repeat: no-repeat;
+  background-size: 1770px 620px;
+  background-position: center;
+}
+.hero__box {
+  max-width: 848px;
+  margin-left: 80px;
+  padding: 100px 0px;
+}
+.hero__title {
+  color: #fff;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 85px;
+}
+.hero__discription {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 24px;
+  margin-bottom: 90px;
+}
+.hero__btn {
+}
+.hero__list {
+  justify-content: flex-end;
+  margin-top: 55px;
+}
+.hero__item {
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.hero__item:nth-child(2n) {
+  margin: 0px 20px;
+}
+.hero__link {
+}
+
+/**footer---------------------------------------------------------------------------------------*/
+.footer {
+  flex-shrink: 0;
+}
