@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero__container {
   height: 620px;
-  background-image: url('/img/photo/BGmain.jpg');
+  background-image: url('./img/photo/BGmain.jpg');
   background-repeat: no-repeat;
   background-size: 1770px 620px;
   background-position: center;
@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: end;
   width: 868px;
   height: 622px;
-  background-image: url(/img/photo/usimg.jpg);
+  background-image: url('./img/photo/usimg.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
